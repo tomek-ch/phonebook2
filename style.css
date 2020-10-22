@@ -103,10 +103,10 @@ th:not(:last-child) {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.253);
 }
 
-.insert-form {
+.insert-form, .edit-form {
     background-color: white;
     width: 100%;
-    max-width: 300px;
+    max-width: 375px;
     margin: auto;
     position: fixed;
     top: 0;
