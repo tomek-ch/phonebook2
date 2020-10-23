@@ -27,6 +27,21 @@ input, textarea {
     font-family: inherit;
     width: 100%;
     padding: 0.7em;
+    outline: none;
+    border-radius: 10px;
+    /* border: 1px solid gray; */
+    border: none;
+    background-color: #eee;
+    transition: background-color 0.1s;
+}
+
+input:hover, textarea:hover {
+    background-color: #ddd;
+}
+
+input:focus, textarea:focus {
+    box-shadow: 0 0 0 2px lightblue;
+    background-color: white;
 }
 
 textarea {
