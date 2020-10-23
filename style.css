@@ -133,3 +133,9 @@ th:not(:last-child) {
     margin-left: auto;
     margin-right: 1em;
 }
+
+.sign-in-form {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+}
