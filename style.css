@@ -16,7 +16,7 @@ body {
 }
 
 main {
-    padding: 2em;
+    padding-bottom: 2em;
     padding-top: 5em;
     margin: auto;
 }
@@ -125,7 +125,7 @@ th:not(:last-child) {
     display: flex;
     justify-content: space-between;
     margin: 1em 0;
-    padding: 1em 0;
+    padding: 1em 2em;
     border-bottom: 1px solid lightgray;
 }
 
@@ -150,7 +150,7 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 1em;
+    padding: 1em 2em;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.253);
     display: flex;
