@@ -6,6 +6,10 @@ const toggleEditForm = () => {
     document.querySelector('.edit-form').classList.toggle('hidden');
 };
 
+const scrollToBottom = () => {
+    document.documentElement.scrollTop = document.body.scrollHeight;
+}
+
 const updateRecord = async e => {
 
     e.preventDefault();
@@ -90,7 +94,8 @@ const insertRecord = async e => {
     });
 
     toggleInsertForm();
-    displayRecords();
+    await displayRecords();
+    scrollToBottom();
 };
 
 document.querySelector('.open-insert-form').addEventListener('click', toggleInsertForm);
