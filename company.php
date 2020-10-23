@@ -23,19 +23,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
+    <main class="company-card">
         <header>
             <h1><?php echo $row['name']; ?></h1>
         </header>
         <p><?php echo $row['description']; ?></p>
-        <p>Website: </p>
-        <p><?php echo $row['website']; ?></p>
-        <p>Email: </p>
-        <p><?php echo $row['email']; ?></p>
-        <p>Phone number: </p>
-        <p><?php echo $row['phone']; ?></p>
-        <p>Address: </p>
-        <p><?php echo $row['address']; ?></p>
+        <div><?php echo $row['website']; ?></div>
+        <div><?php echo $row['email']; ?></div>
+        <div><?php echo $row['phone']; ?></div>
+        <div><?php echo $row['address']; ?></div>
     </main>
 </body>
 </html>

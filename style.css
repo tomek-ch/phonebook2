@@ -195,3 +195,29 @@ nav {
     flex-shrink: 1;
     margin: 0 1em;
 }
+
+.company-card {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+}
+
+.company-card header {
+    color: black;
+}
+
+.company-card {
+    color: rgb(77, 77, 77);
+}
+
+.company-card div {
+    padding: 0.7em 1.3em;
+    background-color: #eee;
+    margin: 0.3em 0;
+    border-radius: 10px;
+}
+
+.company-card p {
+    margin: 1em 0;
+    padding-bottom: 0.5em;
+}
