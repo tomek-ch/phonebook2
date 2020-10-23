@@ -39,6 +39,7 @@ button {
 
 a {
     color: inherit;
+    font-size: inherit;
 }
 
 th:not(:last-child) {
@@ -70,11 +71,6 @@ th:not(:last-child) {
 
 .delete-btn:hover {
     background-color: rgb(175, 13, 13);
-}
-
-.submit-btn {
-    /* margin: 1em 0; */
-    font-size: inherit;
 }
 
 .update-btn {
@@ -149,6 +145,8 @@ nav {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.253);
     display: flex;
     justify-content: space-between;
+    white-space: nowrap;
+    align-items: center;
 }
 
 /* .open-insert-form {
@@ -157,4 +155,10 @@ nav {
 
 [type="submit"] {
     margin-top: 1em;
+}
+
+.search {
+    height: fit-content;
+    flex-shrink: 1;
+    margin: 0 1em;
 }
