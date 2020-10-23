@@ -1,5 +1,10 @@
 <?php
-    require_once('auth.php');
+    session_start();
+    
+    if (!isset($_SESSION['auth'])) {
+        $_SESSION['auth'] = false;
+    }
+    
     if ($_SESSION['auth']) {
         header('location: index.php');
     }

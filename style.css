@@ -4,17 +4,16 @@
     box-sizing: border-box;
 }
 
-html {
-    height: 100%;
-}
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
+    overflow-y: scroll;
+}
+
+main {
+    padding-bottom: 2em;
+    padding-top: 5em;
     margin: auto;
-    /* width: fit-content; */
-    height: 100%;
-    padding: 2em;
 }
 
 label {
@@ -35,9 +34,13 @@ textarea {
     width: 100%;
 }
 
+button {
+    font-size: inherit;
+}
+
 a {
-    font-weight: bold;
     color: inherit;
+    font-size: inherit;
 }
 
 th:not(:last-child) {
@@ -71,11 +74,6 @@ th:not(:last-child) {
     background-color: rgb(175, 13, 13);
 }
 
-.submit-btn {
-    margin: 1em 0;
-    font-size: inherit;
-}
-
 .update-btn {
     background-color: rgb(47, 112, 44);
 }
@@ -94,13 +92,6 @@ th:not(:last-child) {
 .alert-save {
     color: rgb(47, 112, 44);
     background-color: rgb(151, 252, 151);
-}
-
-.open-insert-form {
-    position: fixed;
-    top: 1em;
-    right: 2em;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.253);
 }
 
 .insert-form, .edit-form {
@@ -125,8 +116,13 @@ th:not(:last-child) {
     display: flex;
     justify-content: space-between;
     margin: 1em 0;
-    padding: 1em 0;
+    padding: 1em 2em;
     border-bottom: 1px solid lightgray;
+}
+
+.record a {
+    font-weight: bold;
+    font-size: 1.3em;
 }
 
 .record .delete-btn {
@@ -138,4 +134,32 @@ th:not(:last-child) {
     width: 100%;
     max-width: 400px;
     margin: auto;
+    padding: 2em;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1em 2em;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.253);
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
+    align-items: center;
+}
+
+/* .open-insert-form {
+    margin-left: auto;
+} */
+
+[type="submit"] {
+    margin-top: 1em;
+}
+
+.search {
+    height: fit-content;
+    flex-shrink: 1;
+    margin: 0 1em;
 }

@@ -3,9 +3,10 @@
     $result = $mysqli->query("SELECT * FROM companies") or die($mysqli->error);
 
     if ($result) {
+        $arr = [];
         while($row = $result->fetch_array()) {
-            $myArray[] = $row;
+            $arr[] = $row;
         }
-        echo json_encode($myArray);
+        echo json_encode($arr);
     }
 ?>

@@ -6,6 +6,10 @@ const toggleEditForm = () => {
     document.querySelector('.edit-form').classList.toggle('hidden');
 };
 
+const scrollToBottom = () => {
+    document.documentElement.scrollTop = document.body.scrollHeight;
+}
+
 const updateRecord = async e => {
 
     e.preventDefault();
@@ -15,7 +19,7 @@ const updateRecord = async e => {
         body: new FormData(document.querySelector('.edit-form')),
     });
     
-    displayRecords();
+    getAllRecords();
     toggleEditForm();
 };
 
@@ -44,13 +48,10 @@ const removeRecord = async id => {
         body: data,
     });
 
-    displayRecords();
+    getAllRecords();
 };
 
-const displayRecords = async () => {
-    const response = await fetch('select.php');
-    const companies = JSON.parse(await response.text());
-
+const displayRecords = companies => {
     document.querySelector('main').remove();
     const main = document.createElement('main');
 
@@ -70,7 +71,7 @@ const displayRecords = async () => {
         div.appendChild(removeButton);
 
         const editButton = document.createElement('button');
-        editButton.classList = 'btn update-btn';
+        editButton.classList = 'btn submit-btn';
         editButton.textContent = 'Edit';
         editButton.addEventListener('click', () => populateEditForm(company));
         div.appendChild(editButton);
@@ -79,6 +80,18 @@ const displayRecords = async () => {
     });
 
     document.body.appendChild(main);
+};
+
+const getAllRecords = async () => {
+    const response = await fetch('select.php');
+    const companies = JSON.parse(await response.text());
+    displayRecords(companies);
+};
+
+const searchForRecords = async e => {
+    const response = await fetch(`search.php?search=${e.target.value}`);
+    const companies = JSON.parse(await response.text());
+    displayRecords(companies);
 };
 
 const insertRecord = async e => {
@@ -90,11 +103,13 @@ const insertRecord = async e => {
     });
 
     toggleInsertForm();
-    displayRecords();
+    await displayRecords();
+    scrollToBottom();
 };
 
 document.querySelector('.open-insert-form').addEventListener('click', toggleInsertForm);
 document.querySelector('.close-insert-form').addEventListener('click', toggleInsertForm);
 document.querySelector('.insert-form').addEventListener('submit', insertRecord);
 document.querySelector('.close-edit-form').addEventListener('click', toggleEditForm);
-displayRecords();
+document.querySelector('.search').addEventListener('input', searchForRecords);
+getAllRecords();
