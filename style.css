@@ -79,7 +79,7 @@ th:not(:last-child) {
 }
 
 .submit-btn {
-    margin: 1em 0;
+    /* margin: 1em 0; */
     font-size: inherit;
 }
 
@@ -129,6 +129,11 @@ th:not(:last-child) {
     border-bottom: 1px solid lightgray;
 }
 
+.record a {
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
 .record .delete-btn {
     margin-left: auto;
     margin-right: 1em;
@@ -155,3 +160,7 @@ nav {
 /* .open-insert-form {
     margin-left: auto;
 } */
+
+[type="submit"] {
+    margin-top: 1em;
+}

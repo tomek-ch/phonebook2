@@ -70,7 +70,7 @@ const displayRecords = async () => {
         div.appendChild(removeButton);
 
         const editButton = document.createElement('button');
-        editButton.classList = 'btn update-btn';
+        editButton.classList = 'btn submit-btn';
         editButton.textContent = 'Edit';
         editButton.addEventListener('click', () => populateEditForm(company));
         div.appendChild(editButton);
