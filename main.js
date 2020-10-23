@@ -103,7 +103,7 @@ const insertRecord = async e => {
     });
 
     toggleInsertForm();
-    await displayRecords();
+    await getAllRecords();
     scrollToBottom();
 };
 
