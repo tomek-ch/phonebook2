@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    /* width: fit-content; */
+    height: 100%;
+}
+
+main {
+    padding: 2em;
+    padding-top: 5em;
+    margin: auto;
+}
+
+label {
+    display: block;
+    margin-top: 1em;
+}
+
+input, textarea {
+    display: block;
+    font-size: inherit;
+    font-family: inherit;
+    width: 100%;
+    padding: 0.7em;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+}
+
+button {
+    font-size: inherit;
+}
+
+a {
+    color: inherit;
+}
+
+th:not(:last-child) {
+    padding-right: 13em;
+}
+
+.btn {
+    text-decoration: none;
+    border: none;
+    color: white;
+    padding: 1em;
+    border-radius: 10px;
+    background-color: rgb(48, 141, 172);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(34, 122, 151);
+    transition: background-color 0.3s;
+}
+
+.edit-btn {
+    margin-right: 0.5em;
+}
+
+.delete-btn {
+    background-color: rgb(194, 28, 28);
+}
+
+.delete-btn:hover {
+    background-color: rgb(175, 13, 13);
+}
+
+.submit-btn {
+    margin: 1em 0;
+    font-size: inherit;
+}
+
+.update-btn {
+    background-color: rgb(47, 112, 44);
+}
+
+.alert {
+    padding: 1em;
+    border-radius: 10px;
+    margin-top: 1em;
+}
+
+.alert-delete {
+    background-color: rgb(245, 163, 163);
+    color: rgb(145, 15, 15);
+}
+
+.alert-save {
+    color: rgb(47, 112, 44);
+    background-color: rgb(151, 252, 151);
+}
+
+.insert-form, .edit-form {
+    background-color: white;
+    width: 100%;
+    max-width: 375px;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0.5em 2em;
+    margin: auto;
+    height: 100%;
+    box-shadow: 0 0 10px lightgray;
+}
+
+.hidden {
+    display: none;
+}
+
+.record {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 0;
+    padding: 1em 0;
+    border-bottom: 1px solid lightgray;
+}
+
+.record .delete-btn {
+    margin-left: auto;
+    margin-right: 1em;
+}
+
+.sign-in-form {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    padding: 2em;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1em;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.253);
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .open-insert-form {
+    margin-left: auto;
+} */
