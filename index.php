@@ -20,7 +20,7 @@
 </head>
 <body>
     <nav>
-        <button class="open-insert-form btn">Add a company</button>
+        <button class="open-insert-form btn">Add</button>
         <input type="text" name="search" class="search" placeholder="Search">
         <a href="sign-out.php" class="btn delete-btn">Sign out</a>
     </nav>
