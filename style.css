@@ -198,9 +198,11 @@ nav {
 
 .company-card {
     width: 100%;
-    max-width: 400px;
-    padding: 2em;
-    margin: auto;
+    max-width: calc(400px - 4em);
+    padding: 3em 2em;
+    margin: 5em auto;
+    box-shadow: 0 0 10px lightgray;
+    border-radius: 10px;
 }
 
 .company-card header {
