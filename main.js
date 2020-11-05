@@ -35,8 +35,6 @@ const populateEditForm = company => {
     document.querySelector(`.edit-form #company-email`).value = email;
     document.querySelector(`.edit-form #company-address`).value = address;
     document.querySelector(`.edit-form #company-website`).value = website;
-
-    document.querySelector('.edit-form').addEventListener('submit', updateRecord);
 };
 
 const removeRecord = async id => {
@@ -109,7 +107,10 @@ const insertRecord = async e => {
 
 document.querySelector('.open-insert-form').addEventListener('click', toggleInsertForm);
 document.querySelector('.close-insert-form').addEventListener('click', toggleInsertForm);
-document.querySelector('.insert-form').addEventListener('submit', insertRecord);
 document.querySelector('.close-edit-form').addEventListener('click', toggleEditForm);
+
+document.querySelector('.insert-form').addEventListener('submit', insertRecord);
+document.querySelector('.edit-form').addEventListener('submit', updateRecord);
+
 document.querySelector('.search').addEventListener('input', searchForRecords);
 getAllRecords();
