@@ -16,7 +16,7 @@ const updateRecord = async e => {
 
     await fetch('update.php', {
         method: 'POST',
-        body: new FormData(document.querySelector('.edit-form')),
+        body: new FormData(e.target),
     });
     
     getAllRecords();
