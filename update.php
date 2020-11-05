@@ -1,4 +1,14 @@
 <?php
+    session_start();
+    
+    if (!isset($_SESSION['auth'])) {
+        $_SESSION['auth'] = false;
+    }
+
+    if (!$_SESSION['auth']) {
+        header('location: sign-in.php');
+    }
+    
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mysqli = new mysqli('localhost', 'root', '', 'phonebook') or die(mysqli_error($mysqli));
 
