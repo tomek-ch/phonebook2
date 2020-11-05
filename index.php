@@ -44,12 +44,12 @@
             E-mail address:
         </label>
         <input type="email" name="company-email" placeholder="janusz@januszex.com">
-        <label for="company-email">
-            Address:
+        <label for="company-website">
+            Website:
         </label>
         <input type="text" name="company-website" placeholder="janusz.pl">
-        <label for="company-email">
-            Website:
+        <label for="company-address">
+            Address:
         </label>
         <input type="text" name="company-address" placeholder="Al. Jana Pawła II 21/37 Warszawa">
         <button class="btn submit-btn add-btn" type="submit" name="update">
